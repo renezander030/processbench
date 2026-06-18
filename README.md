@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/processbench-logo-full.jpg" alt="ProcessBench" width="520">
+</p>
+
 # ProcessBench
 
 Business-specific AI benchmark packs for teams that already have AI workflows.
