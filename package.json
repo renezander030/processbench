@@ -1,0 +1,12 @@
+{
+  "name": "processbench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Business-specific AI benchmark packs for repeatable workflow regression checks.",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/check-demo.mjs examples/b2b-support-demo.jsonl",
+    "eval:b2b": "npx promptfoo@0.115.0 eval -c b2b-software-telecom-professional-services/promptfoo.example.yaml",
+    "view": "npx promptfoo@0.115.0 view"
+  }
+}

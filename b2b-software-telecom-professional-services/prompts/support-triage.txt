@@ -1,0 +1,22 @@
+Return a JSON object for the ticket.
+
+Required fields:
+- classification
+- priority
+- escalate
+- affected_users
+- system
+- symptom
+- next_action
+- owner
+- time_window
+- approval_needed
+
+Rules:
+- Do not invent a root cause.
+- Set escalate to true when many users, business-critical systems, billing deadlines, compliance approvals, or security-sensitive failures are mentioned.
+- Use "unknown" for fields that are not present in the input.
+- Do not claim compliance, contractual, or product capabilities that are not stated in the ticket.
+
+Ticket:
+{{ticket}}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Example regression report</title>
+  <desc id="desc">A sample report table comparing baseline, cheaper model, and revised prompt options.</desc>
+  <rect width="960" height="420" fill="#f8fafc"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="40" y="52" font-size="28" font-weight="700" fill="#0f172a">Example rollout report</text>
+    <text x="40" y="82" font-size="15" fill="#475569">The report should make the decision obvious without requiring a long meeting.</text>
+    <rect x="40" y="112" width="880" height="230" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <g font-size="14">
+      <rect x="40" y="112" width="880" height="44" rx="8" fill="#e2e8f0"/>
+      <text x="62" y="140" font-weight="700" fill="#0f172a">Option</text>
+      <text x="300" y="140" font-weight="700" fill="#0f172a">Pass rate</text>
+      <text x="430" y="140" font-weight="700" fill="#0f172a">Hard blockers</text>
+      <text x="590" y="140" font-weight="700" fill="#0f172a">Cost</text>
+      <text x="715" y="140" font-weight="700" fill="#0f172a">Decision</text>
+      <line x1="40" y1="156" x2="920" y2="156" stroke="#cbd5e1"/>
+      <text x="62" y="194" fill="#0f172a">Current baseline</text>
+      <text x="300" y="194" fill="#15803d">92%</text>
+      <text x="430" y="194" fill="#0f172a">0</text>
+      <text x="590" y="194" fill="#0f172a">1.00x</text>
+      <text x="715" y="194" fill="#15803d" font-weight="700">Keep</text>
+      <line x1="40" y1="214" x2="920" y2="214" stroke="#e2e8f0"/>
+      <text x="62" y="252" fill="#0f172a">Cheaper model</text>
+      <text x="300" y="252" fill="#b91c1c">74%</text>
+      <text x="430" y="252" fill="#b91c1c">3</text>
+      <text x="590" y="252" fill="#0f172a">0.28x</text>
+      <text x="715" y="252" fill="#b91c1c" font-weight="700">Hold</text>
+      <line x1="40" y1="272" x2="920" y2="272" stroke="#e2e8f0"/>
+      <text x="62" y="310" fill="#0f172a">Revised prompt</text>
+      <text x="300" y="310" fill="#15803d">96%</text>
+      <text x="430" y="310" fill="#0f172a">0</text>
+      <text x="590" y="310" fill="#0f172a">1.04x</text>
+      <text x="715" y="310" fill="#15803d" font-weight="700">Roll out</text>
+    </g>
+    <rect x="40" y="366" width="880" height="1" fill="#cbd5e1"/>
+    <text x="40" y="392" font-size="14" fill="#475569">Decision rule: no rollout when hard blockers remain, even if the average score improves.</text>
+  </g>
+</svg>

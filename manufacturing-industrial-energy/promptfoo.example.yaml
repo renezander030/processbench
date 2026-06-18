@@ -1,0 +1,21 @@
+description: Manufacturing maintenance work-order regression benchmark
+
+prompts:
+  - file://prompts/maintenance-extraction.txt
+
+providers:
+  - openai:gpt-4.1
+  - anthropic:messages:claude-sonnet-4
+
+tests:
+  - vars:
+      work_order: "Line 4 filler stopped twice in one shift. Operator reports abnormal vibration near pump P-204. Temporary restart worked, but issue returned after 40 minutes."
+    assert:
+      - type: contains-json
+        value:
+          asset: "pump P-204"
+          priority: "review"
+          expert_review_required: true
+      - type: not-contains
+        value: "root cause is"
+

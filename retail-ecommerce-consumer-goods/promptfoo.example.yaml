@@ -1,0 +1,22 @@
+description: Retail product-content regression benchmark
+
+prompts:
+  - file://prompts/product-description.txt
+
+providers:
+  - openai:gpt-4.1
+  - anthropic:messages:claude-sonnet-4
+
+tests:
+  - vars:
+      product_data: "Waterproof hiking jacket. 10k membrane. Recycled polyester. No PFAS-free claim provided. Colors: black, olive."
+    assert:
+      - type: contains-any
+        value:
+          - "10k membrane"
+          - "waterproof"
+      - type: not-contains
+        value: "PFAS-free"
+      - type: not-contains
+        value: "guaranteed"
+

@@ -1,0 +1,16 @@
+Return a JSON object for the maintenance work order.
+
+Required fields:
+- asset
+- fault_signal
+- priority
+- expert_review_required
+- suspected_next_action
+
+Rules:
+- Do not invent a root cause.
+- Set expert_review_required to true when the failure is recurring, ambiguous, safety-relevant, or affects production continuity.
+- Use "unknown" for fields that are not present in the input.
+
+Work order:
+{{work_order}}

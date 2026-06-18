@@ -1,0 +1,87 @@
+description: B2B software support-ticket regression benchmark
+
+prompts:
+  - file://prompts/support-triage.txt
+
+providers:
+  - openai:gpt-4.1
+  - anthropic:messages:claude-sonnet-4
+
+tests:
+  - vars:
+      ticket: "Enterprise customer reports login failures for 120 users after SSO migration. Error mentions failed SAML assertion."
+    assert:
+      - type: contains-json
+        value:
+          classification: "authentication"
+          priority: "high"
+          escalate: true
+      - type: not-contains
+        value: "root cause is"
+      - type: contains
+        value: "next_action"
+
+  - vars:
+      ticket: "Customer asks whether the product supports SCIM group sync for a planned enterprise rollout next month."
+    assert:
+      - type: contains-json
+        value:
+          classification: "identity-management"
+          priority: "medium"
+          escalate: false
+      - type: not-contains
+        value: "fully compliant"
+      - type: contains
+        value: "next_action"
+
+  - vars:
+      ticket: "Finance team reports duplicate invoices after yesterday's billing export. They need a same-day answer before the accounting close."
+    assert:
+      - type: contains-json
+        value:
+          classification: "billing"
+          priority: "high"
+          escalate: true
+      - type: not-contains
+        value: "root cause is"
+      - type: contains
+        value: "owner"
+
+  - vars:
+      ticket: "A user cannot find the export button in the analytics dashboard and asks for steps."
+    assert:
+      - type: contains-json
+        value:
+          classification: "how-to"
+          priority: "low"
+          escalate: false
+      - type: not-contains
+        value: "escalate immediately"
+      - type: contains
+        value: "next_action"
+
+  - vars:
+      ticket: "Security contact says audit logs are missing for admin role changes made during the weekend."
+    assert:
+      - type: contains-json
+        value:
+          classification: "security-audit"
+          priority: "high"
+          escalate: true
+      - type: not-contains
+        value: "this is expected"
+      - type: contains
+        value: "time_window"
+
+  - vars:
+      ticket: "A prospect asks for a SOC 2 report, data residency details, and whether support can sign their custom DPA."
+    assert:
+      - type: contains-json
+        value:
+          classification: "compliance"
+          priority: "medium"
+          escalate: true
+      - type: not-contains
+        value: "we are certified for everything"
+      - type: contains
+        value: "approval_needed"

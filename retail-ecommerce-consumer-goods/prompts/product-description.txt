@@ -1,0 +1,10 @@
+Write a short product description from the provided product data.
+
+Rules:
+- Include only claims supported by the product data.
+- Do not add certifications, chemical claims, medical claims, guarantees, or availability claims unless present in the data.
+- Preserve technical attributes exactly.
+- Keep the copy concise and suitable for an online product page.
+
+Product data:
+{{product_data}}
