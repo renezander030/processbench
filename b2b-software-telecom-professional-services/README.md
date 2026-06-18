@@ -35,3 +35,10 @@ Add when needed:
 - DeepEval for pytest-style app evals
 - Ragas for RAG and knowledge-base workflows
 - LangGraph/LangSmith for multi-step support or delivery agents
+
+## Related Repositories
+
+- [`processbench`](https://github.com/renezander030/processbench) for the benchmark-pack structure.
+- [`draftcat`](https://github.com/renezander030/draftcat) for governed AI pipelines with approval and audit.
+- [`agent-approval-gate`](https://github.com/renezander030/agent-approval-gate) for a minimal approval-gate pattern around high-risk actions.
+- [`agentic-task-system`](https://github.com/renezander030/agentic-task-system) for keeping workflow cases, decisions, and follow-ups connected to task context.

@@ -158,6 +158,20 @@ ProcessBench is a workflow-pack layer on top of existing evaluation tools.
 - [LangGraph](https://github.com/langchain-ai/langgraph) and LangSmith for stateful agent workflows and tracing.
 - [OpenAI Evals](https://github.com/openai/evals) and [Inspect](https://github.com/UKGovernmentBEIS/inspect_ai) for private or research-grade eval design.
 
+## Related Repositories
+
+ProcessBench is the benchmark-pack layer. These related repositories cover adjacent parts of the same production-AI workflow.
+
+| Repository | Where it fits |
+|---|---|
+| [`skillgate`](https://github.com/renezander030/skillgate) | Deterministic finish-line gates for AI coding agents. Use it when the output is code or a repo change and the acceptance criteria should block commit or publish. |
+| [`draftcat`](https://github.com/renezander030/draftcat) | Governed AI pipelines with deterministic steps, approval, dispatch, and audit. Use it when a workflow should run with operator control. |
+| [`agent-approval-gate`](https://github.com/renezander030/agent-approval-gate) | A smaller approval-gate pattern with JSON schemas, n8n, and email examples. Use it when you need a minimal approval workflow. |
+| [`agentic-task-system`](https://github.com/renezander030/agentic-task-system) | Persistent task and context memory for agents. Use it when benchmark cases, decisions, and follow-ups need to stay connected to work. |
+| [`foundations`](https://github.com/renezander030/foundations) | Local-first context discovery. Use it before broad search when you want to start from proven tools, notes, and code. |
+
+The split is intentional: ProcessBench helps decide whether an AI workflow still works; the other repositories help run, gate, approve, and remember the work around that workflow.
+
 ## Templates
 
 - [`templates/benchmark-sprint.md`](templates/benchmark-sprint.md) for planning a first benchmark pass

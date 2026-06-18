@@ -36,3 +36,10 @@ Add when needed:
 - LangGraph for multi-step troubleshooting or process agents
 - DeepEval for custom Python metrics around process outputs
 - domain simulator or deterministic checker for scheduling and operational constraints
+
+## Related Repositories
+
+- [`processbench`](https://github.com/renezander030/processbench) for the benchmark-pack structure.
+- [`skillgate`](https://github.com/renezander030/skillgate) for deterministic gates when AI changes code, configuration, or documented processes.
+- [`draftcat`](https://github.com/renezander030/draftcat) for governed AI pipelines with approval and audit.
+- [`foundations`](https://github.com/renezander030/foundations) for starting from proven local context before expanding research.

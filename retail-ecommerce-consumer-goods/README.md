@@ -35,3 +35,10 @@ Add when needed:
 - Ragas for product knowledge and policy retrieval
 - DeepEval for custom quality metrics
 - LangGraph for multi-step customer-service or merchandising agents
+
+## Related Repositories
+
+- [`processbench`](https://github.com/renezander030/processbench) for the benchmark-pack structure.
+- [`draftcat`](https://github.com/renezander030/draftcat) for governed AI pipelines with approval and audit.
+- [`agent-approval-gate`](https://github.com/renezander030/agent-approval-gate) for review gates around customer-facing or policy-sensitive actions.
+- [`skillgate`](https://github.com/renezander030/skillgate) for deterministic gates when AI changes storefront code, content rules, or release artifacts.
