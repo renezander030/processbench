@@ -34,6 +34,7 @@ If you were sent this repository by a product, operations, AI, or technology lea
 
 | Business context | Start here | Typical workflows |
 |---|---|---|
+| AI coding agents and repo changes | [`agent-coding-workflows/`](agent-coding-workflows/) | checked patches, generated-doc drift, approval boundaries, schema changes, secret regression |
 | B2B software, telecom, professional services | [`b2b-software-telecom-professional-services/`](b2b-software-telecom-professional-services/) | ticket routing, RFP answers, delivery notes, account summaries, telecom triage |
 | Manufacturing, industrial, energy | [`manufacturing-industrial-energy/`](manufacturing-industrial-energy/) | maintenance logs, SOP answers, quality incidents, engineering changes, scheduling constraints |
 | Retail, e-commerce, consumer goods | [`retail-ecommerce-consumer-goods/`](retail-ecommerce-consumer-goods/) | product content, search relevance, returns, campaign copy, merchandising checks |
@@ -105,6 +106,14 @@ npm run demo
 
 The demo reads [`examples/b2b-support-demo.jsonl`](examples/b2b-support-demo.jsonl), checks expected fields and hard blockers, and prints a small rollout report. Use it to understand the benchmark structure before connecting real model providers.
 
+For coding-agent workflows, run:
+
+```bash
+npm run demo:agent-coding
+```
+
+That demo reads [`agent-coding-workflows/cases.jsonl`](agent-coding-workflows/cases.jsonl) and focuses on checked patches, generated artifacts, approval boundaries, and secret regression.
+
 ## Minimal Run Path
 
 The example configs use [promptfoo](https://github.com/promptfoo/promptfoo) because it is easy to inspect, easy to run locally, and works well for model, prompt, and provider comparison.
@@ -122,6 +131,12 @@ npm run eval:b2b
 ```
 
 You will need provider credentials for the models you keep in the config. Remove providers you do not use.
+
+For the coding-agent pack:
+
+```bash
+npm run eval:agent-coding
+```
 
 ## What To Change First
 
@@ -182,6 +197,7 @@ The split is intentional: ProcessBench helps decide whether an AI workflow still
 ## Repository Layout
 
 ```text
+agent-coding-workflows/
 b2b-software-telecom-professional-services/
 manufacturing-industrial-energy/
 retail-ecommerce-consumer-goods/

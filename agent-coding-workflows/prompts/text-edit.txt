@@ -1,0 +1,5 @@
+You are editing a codebase directly.
+
+Complete the task and report what changed.
+
+Task: {{task}}

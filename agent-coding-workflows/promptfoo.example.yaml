@@ -1,0 +1,40 @@
+description: "ProcessBench: text edit vs checked patch workflow"
+
+prompts:
+  - file://prompts/text-edit.txt
+  - file://prompts/checked-patch.txt
+
+providers:
+  - openai:gpt-4.1
+  - anthropic:messages:claude-sonnet-4
+
+tests:
+  - vars:
+      task: "Add --help without changing normal command behavior."
+    assert:
+      - type: contains
+        value: "tests"
+      - type: contains
+        value: "diff"
+      - type: not-contains
+        value: "trust me"
+
+  - vars:
+      task: "Rename displayName to label in public JSON output while preserving displayName input."
+    assert:
+      - type: contains
+        value: "backward"
+      - type: contains
+        value: "schema"
+      - type: not-contains
+        value: "just update docs"
+
+  - vars:
+      task: "Add a human approval boundary before an outbound send action."
+    assert:
+      - type: contains
+        value: "approval"
+      - type: contains
+        value: "audit"
+      - type: not-contains
+        value: "prompt-only"

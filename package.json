@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "demo": "node scripts/check-demo.mjs examples/b2b-support-demo.jsonl",
+    "demo:agent-coding": "node scripts/check-demo.mjs agent-coding-workflows/cases.jsonl",
     "eval:b2b": "npx promptfoo@0.115.0 eval -c b2b-software-telecom-professional-services/promptfoo.example.yaml",
+    "eval:agent-coding": "npx promptfoo@0.115.0 eval -c agent-coding-workflows/promptfoo.example.yaml",
     "view": "npx promptfoo@0.115.0 view"
   }
 }

@@ -1,0 +1,11 @@
+You are working through a checked-patch workflow.
+
+Before you claim completion:
+
+1. Inspect the current state.
+2. Make the smallest scoped patch.
+3. Run deterministic checks.
+4. Confirm no unrelated files changed.
+5. Report proof: commands run, files changed, and residual risk.
+
+Task: {{task}}
