@@ -114,6 +114,16 @@ npm run demo:agent-coding
 
 That demo reads [`agent-coding-workflows/cases.jsonl`](agent-coding-workflows/cases.jsonl) and focuses on checked patches, generated artifacts, approval boundaries, and secret regression.
 
+When a pack becomes a regression surface, export its cases to Dolt so fixture
+changes become data diffs:
+
+```bash
+npm run dolt:export -- agent-coding-workflows/cases.jsonl --pack agent-coding --out dolt/eval_cases.csv
+```
+
+See [`docs/dolt-versioned-fixtures.md`](docs/dolt-versioned-fixtures.md) for the
+Dolt schema and import/diff flow.
+
 ## Minimal Run Path
 
 The example configs use [promptfoo](https://github.com/promptfoo/promptfoo) because it is easy to inspect, easy to run locally, and works well for model, prompt, and provider comparison.
